@@ -17,7 +17,7 @@ spec:
         image: okteto.dev/wedding-messenger-api:latest
         ports:
         - containerPort: 8888
-      env:
-        account_sid: ${{ secrets.account_sid }}  
-        auth_token: ${{ secrets.auth_token }}  
-        db_password: ${{ secrets.db_password }}  
+        env:
+          account_sid: ${{ secrets.account_sid }}  
+          auth_token: ${{ secrets.auth_token }}  
+          db_password: ${{ secrets.db_password }}  
