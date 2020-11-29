@@ -101,7 +101,7 @@ DATABASES = {
         'USER': 'mapping_portal_admin',
         'PASSWORD': 'password',
         # 'HOST': 'localhost',
-        'HOST': 'postgresql.mkeller3.svc.cluster.local'
+        'HOST': 'postgresql.mkeller3.svc.cluster.local',
         'PORT': '5432',
     }
 }
