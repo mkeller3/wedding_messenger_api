@@ -10,12 +10,11 @@ ENV DEBIAN_FRONTEND=noninteractive
 ENV PYTHONUNBUFFERED 1
 ENV PORT=8888
 
-# RUN apt-update && apt-add \
-#         python3-pip \
-#         python3-dev \
-#         python3-venv \
-#         && \
-#     rm -rf /var/lib/apt/lists*
+RUN apt-get update \
+  && apt-get install -y python3-pip python3-dev \
+  && cd /usr/local/bin \
+  && ln -s /usr/bin/python3 python \
+  && pip3 install --upgrade pip
 
 RUN pip3 install -r requirements.txt
 EXPOSE 8888
