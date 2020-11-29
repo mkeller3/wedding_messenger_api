@@ -19,4 +19,4 @@ RUN apt-get update \
 RUN pip3 install -r requirements.txt
 EXPOSE 8888
 
-CMD gunicorn wedding_messegner.wsgi:application --bind 0.0.0.0:8888 --timeout 320 --workers 5
+CMD gunicorn wedding_messenger.wsgi:application --bind 0.0.0.0:8888 --timeout 320 --workers 5
