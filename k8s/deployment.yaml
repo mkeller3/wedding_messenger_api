@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wedding-messenger
+spec:
+  selector:
+    matchLabels:
+      app: wedding-messenger
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: wedding-messenger
+    spec:
+      containers:
+      - name: wedding-messenger
+        image: okteto.dev/wedding-messenger-api:latest
+        ports:
+        - containerPort: 8888
