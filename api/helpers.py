@@ -1,9 +1,10 @@
 import string
 import random
 from twilio.rest import Client
+import os
 
-account_sid = 'ACcf4edbfa280e8efeb23c81a8e8c665d0'
-auth_token = '7d5550eb8406050f56d2a24d58cf9685'
+account_sid = os.environ['account_sid']
+auth_token = os.environ['auth_token']
 client = Client(account_sid, auth_token)
 
 def sendTextMessage(to,body,mediaUrl=False):

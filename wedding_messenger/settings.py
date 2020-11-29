@@ -99,7 +99,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'wedding_messenger',
         'USER': 'mapping_portal_admin',
-        'PASSWORD': 'password',
+        'PASSWORD': os.environ['db_password'],
         # 'HOST': 'localhost',
         'HOST': 'postgresql.mkeller3.svc.cluster.local',
         'PORT': '5432',
