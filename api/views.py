@@ -305,14 +305,14 @@ class alerts(APIView):
 class sendText(APIView):
 
     def post(self, request):    
-        serializer = trialNumberDataSerializer(data=request.data)
-        serializer.is_valid(raise_exception=True)
-        serializer.save()
-        sendTextMessage(
-            request.data['phone_number'],
-            'Hi, welcome to Wedding Messenger We would love to help you with your special day. Click the following link to register. https://wedsec.com/register/',
-            'https://media.giphy.com/media/10wwy1cJ8j2aD6/giphy.gif'
-        )
+        # serializer = trialNumberDataSerializer(data=request.data)
+        # serializer.is_valid(raise_exception=True)
+        # serializer.save()
+        # sendTextMessage(
+        #     request.data['phone_number'],
+        #     'Hi, welcome to Wedding Messenger We would love to help you with your special day. Click the following link to register. https://wedsec.com/register/',
+        #     'https://media.giphy.com/media/10wwy1cJ8j2aD6/giphy.gif'
+        # )
         return Response(status=status.HTTP_200_OK)
 
 class mapData(APIView):
